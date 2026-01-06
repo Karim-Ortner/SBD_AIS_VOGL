@@ -277,12 +277,6 @@ With a payload similar to:
 docker exec -it kafka kafka-console-consumer.sh   --bootstrap-server localhost:9092   --topic dbserver1.public.activity  --from-beginning
 ```
 
-## This enables, for instance:
-- Downstream analytics (in the analytical plane) in real-time
-- Streaming ETL pipelines
-- Event-driven microservices
-- Search index synchronization
-
 # Activity 1
 Considering the above part ```Debezium CDC with PostgreSQL and Kafka```, explain with your own words what it does and why it is a relevant software architecture for Big Data in the AI era and for which use cases.
 
