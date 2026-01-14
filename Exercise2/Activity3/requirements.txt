@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-psycopg[binary]
-=======
 psycopg2-binary
 # Added for Kafka consumer client used by fraud agents
 kafka-python
 kafka-python>=2.0.2
->>>>>>> Stashed changes
