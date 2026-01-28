@@ -1,16 +1,16 @@
 {
-  "tableName": "ingest_kafka",
+  "tableName": "ingest_kafka_fts",
   "tableType": "REALTIME",
   "segmentsConfig": {
     "timeType": "MILLISECONDS",
-    "schemaName": "ingest_kafka",
+    "schemaName": "ingest_kafka_fts",
     "timeColumnName": "timestamp",
     "replicasPerPartition": "1"
   },
   "tenants": {},
-  
   "tableIndexConfig": {
     "loadMode": "MMAP",
+    "noDictionaryColumns": ["content"],
     "streamConfigs": {
       "streamType": "kafka",
       "stream.kafka.topic.name": "ingest-kafka",
@@ -23,6 +23,13 @@
       "stream.kafka.consumer.prop.auto.offset.reset": "smallest"
     }
   },
+  "fieldConfigList": [
+    {
+      "name": "content",
+      "encodingType": "RAW",
+      "indexTypes": ["TEXT"]
+    }
+  ],
   "metadata": {
     "customConfigs": {}
   }
